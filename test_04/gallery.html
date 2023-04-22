@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Model Picture Aggregator</title>
+	<link rel="stylesheet" href="styles.css">
+	<style>
+		/* Set styles for the gallery elements */
+		#gallery-name {
+			margin-bottom: 20px;
+			text-align: center;
+		}
+
+		.model-list {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		.model-list img {
+			width: 150px;
+			height: 150px;
+			margin: 10px;
+			border: 2px solid #333;
+			cursor: pointer;
+		}
+
+		/* Set styles for the lightbox */
+		.lightbox {
+			display: none;
+			position: fixed;
+			z-index: 999;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.8);
+		}
+
+		.lightbox-content {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+		}
+
+		.lightbox-image {
+			max-width: 90%;
+			max-height: 90%;
+			margin-bottom: 20px;
+		}
+
+		.lightbox-prev,
+		.lightbox-next {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			font-size: 50px;
+			font-weight: bold;
+			color: #fff;
+			background-color: rgba(0, 0, 0, 0.3);
+			border: none;
+			outline: none;
+			cursor: pointer;
+		}
+
+		.lightbox-prev {
+			left: 20px;
+		}
+
+		.lightbox-next {
+			right: 20px;
+		}
+
+		.lightbox-close {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			font-size: 40px;
+			color: #fff;
+			background-color: transparent;
+			border: none;
+			outline: none;
+			cursor: pointer;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+        <a href="index.html" class="home-button">Home</a>
+		<h1 id="model-name"></h1>
+	</header>
+	<main>
+		<div id="gallery-name"></div>
+		<div id="gallery-pics" class="model-list">
+			<!-- Gallery picture thumbnails will be added dynamically by JavaScript -->
+		</div>
+	</main>
+	<footer>
+		<p>&copy; 2023 Model Picture Aggregator</p>
+	</footer>
+	<script src="gallery.js"></script>
+</body>
+
+</html>
